@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    window.onload = function () {
+      const width = window.innerWidth;
+
+      // Redirect based on screen width
+      if (width <= 768) {
+        // Mobile
+        window.location.href = "mobile.html";
+      } else {
+        // Desktop
+        window.location.href = "pc_version.html";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting based on your device...</p>
+</body>
+</html>
