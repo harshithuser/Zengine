@@ -210,7 +210,7 @@
         margin-right: 50px;
       }
       #open-sidebar-button{
-        margin-left: 10px;
+        margin-left: 90px;
       }
 
       .head img {
@@ -219,7 +219,7 @@
         height: 50px;
         width: 50px;
         margin-right: 0;
-        margin-left: 0;
+        margin-left: 20px;
       }
 
       #signout {
@@ -366,7 +366,7 @@
           </svg>
         </button>
         <img src="images/profile.png" id="user-pic-submenu">
-        <h3 id="sub-menu-name">Harshith</h3>
+        <h3 id="sub-menu-name">Username</h3>
       </div>
       <hr>
       <a href="#" class="sub-menu-link">
@@ -425,12 +425,14 @@
       const loginLink = document.getElementById("login");
       const userPicSubmenu = document.getElementById("user-pic-submenu");
       const submenuName = document.getElementById("sub-menu-name");
+      const openSidebar = document.getElementById("open-sidebar-button");
 
 
       if (user) {
         profileImg.src = user.photoURL || "images/profile.png";
         userPicSubmenu.src = user.photoURL || "images/profile.png";
         profileImg.style.display = "block";
+        openSidebar.style.marginLeft = "20px";
         const username = user.displayName;
         submenuName.textContent = username;
         signOutBtn.style.display = "inline-block";
@@ -438,7 +440,7 @@
 
       } else {
         profileImg.style.display = "none";
-
+        openSidebar.style.marginLeft = "90px";
         signOutBtn.style.display = "none";
         loginLink.style.display = "block";
       }
