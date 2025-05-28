@@ -24,10 +24,12 @@
     html {
       font-family: 'Poppins', sans-serif;
       color: var(--text-color);
+      min-width: 320px;
     }
 
     body {
       min-height: 100vh;
+      min-width: 320px;
       background-color: var(--primary-color);
     }
 
@@ -99,13 +101,14 @@
       display: none;
     }
 
-    #overlay1{
-        position: fixed;
-        background: rgba(0, 0, 0, 0.5);;
-        inset: 0;
-        z-index: 8;
-        display: none;
-      }
+    #overlay1 {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.5);
+      ;
+      inset: 0;
+      z-index: 8;
+      display: none;
+    }
 
     .heading,
     .head {
@@ -206,11 +209,12 @@
       }
 
       .head h1 {
-        font-size: 40px;
-        margin-right: 50px;
+        font-size: 30px;
+        margin-right: 70px;
       }
-      #open-sidebar-button{
-        margin-left: 70px;
+
+      #open-sidebar-button {
+        margin-left: 60px;
       }
 
       .head img {
@@ -219,7 +223,7 @@
         height: 50px;
         width: 50px;
         margin-right: 0;
-        margin-left: 20px;
+        margin-left: 0;
       }
 
       #signout {
@@ -230,7 +234,7 @@
 
       main h1 {
         font-size: 60px;
-        padding: 60px;
+        padding: 35px;
         font-family: 'Tagesschrift' sans-serif;
       }
 
@@ -305,7 +309,7 @@
         margin-right: 8px;
       }
 
-      
+
 
       #close-user-details {
         background: none;
@@ -314,13 +318,85 @@
         cursor: pointer;
       }
 
-      #user-pic-submenu{
+      #user-pic-submenu {
         margin-left: 0;
       }
-      .user-details.show-nav~#overlay1{
+
+      .user-details.show-nav~#overlay1 {
         display: block;
       }
-      
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0 40px 0;
+      }
+
+      .box {
+        text-decoration: none;
+        width: 280px;
+        padding: 5px;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+        border: 3px solid white;
+        box-shadow: 0 4px 10px aqua;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .box:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 15px aqua;
+      }
+
+      .box img {
+        height: 200px;
+        width: 200px;
+      }
+
+      .box h3 {
+        font-size: 30px;
+        font-weight: 1500;
+        color: aqua;
+      }
+
+      .box hr {
+        color: rgb(255, 255, 255);
+        width: 100%;
+      }
+
+      .box p {
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .get-started {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background-color: #0071FF;
+        color: rgb(207, 203, 203);
+        font-weight: 900;
+        height: 50px;
+        border-radius: 10px;
+        width: 150px;
+        box-shadow: 0 4px 10px aqua;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .get-started:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 15px aqua;
+      }
+
+      .get-started-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+      }
     }
   </style>
 </head>
@@ -391,10 +467,33 @@
   <div id="overlay" onclick="closeSidebar()"></div>
   <div id="overlay1" onclick="closeUserDetails()"></div>
 
+
+
+
+
+  <!-- The Main Content Starts From Here!! -->
   <main>
+
     <h1 name="home">Explore,<br>Create,<br>Imagine,<br>-Zengine Hub</h1>
-    
+
+    <div class="get-started-div">
+      <a class="get-started" href="login_mobile.html">Get Started</a>
+    </div>
+
+    <div class="container">
+      <a class="box" href="https://zengames.netlify.app/">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-So1_gFGtnb-n2_2LYtOXUzFVMT3A2G3tyA&usqp=CAU">
+        <h3>Zengames</h3>
+        <hr>
+        <p>Play a Variety of Games <br> from here!!</p>
+      </a>
+    </div>
+
   </main>
+
+
+
+
 
   <!-- Firebase Auth Script -->
   <script type="module">
@@ -440,7 +539,7 @@
 
       } else {
         profileImg.style.display = "none";
-        openSidebar.style.marginLeft = "70px";
+        openSidebar.style.marginLeft = "60px";
         signOutBtn.style.display = "none";
         loginLink.style.display = "block";
       }
@@ -480,7 +579,9 @@
       userNav.classList.remove("show-nav");
     };
 
-    
+
+
+
 
   </script>
 </body>
