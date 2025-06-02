@@ -210,7 +210,7 @@
 
       .head h1 {
         font-size: 30px;
-        margin-right: 70px;
+        margin-right: auto;
       }
 
       #open-sidebar-button {
@@ -234,6 +234,7 @@
 
       main h1 {
         font-size: 60px;
+        text-align: center;
         padding: 35px;
         font-family: 'Tagesschrift' sans-serif;
       }
@@ -244,7 +245,7 @@
         top: 0;
         right: -100%;
         height: 100vh;
-        width: min(20rem, 100%);
+        width: min(17rem, 100%);
         background-color: #11121a;
         z-index: 10;
         color: #Ffff;
@@ -327,6 +328,7 @@
       }
 
       .container {
+        width: 320px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -396,6 +398,12 @@
         align-items: center;
         justify-content: center;
         padding-bottom: 50px;
+      }
+
+      .heading_1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   </style>
@@ -473,8 +481,9 @@
 
   <!-- The Main Content Starts From Here!! -->
   <main>
-
+    <div class="heading_1">
     <h1 name="home">Explore,<br>Create,<br>Imagine,<br>-Zengine Hub</h1>
+    </div>
 
     <div class="get-started-div">
       <a class="get-started" href="login_mobile.html">Get Started</a>
