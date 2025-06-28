@@ -53,7 +53,6 @@ onAuthStateChanged(auth, (user) => {
         userSubmenuName.textContent = username;
         loginLink.textContent = "Sign Out";
         loginLink.style.background = "red";
-        loginLink.href = "#";
         getStartedBtn.style.display = 'none';
         loginLink.onclick = async () => {
             await signOut(auth);
