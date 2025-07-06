@@ -115,8 +115,7 @@
     }
 
     nav ul li:hover a {
-      background: rgba(0, 255, 255, 0.2);
-      color: #00f0ff;
+      background: #17b8c4;
       box-shadow: 0 0 10px #00f0ff80;
       font-weight: 600;
     }
@@ -133,7 +132,7 @@
 
     nav ul li a.login:hover {
       background: #fff;
-      color: #00f0ff;
+      color: rgb(255, 255, 255);
       padding: 12px 24px;
     }
 
@@ -309,6 +308,20 @@
     p {
       margin-top: 10px;
     }
+
+    #signout{
+      background: red;
+      color: #fff;
+      box-shadow: none;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #signout:hover{
+      background: red;
+      color: #000;
+      font-weight: 900;
+    }
   </style>
 </head>
 
@@ -326,6 +339,7 @@
         <li><a href="#">Features</a></li>
         <li><a href="#">About</a></li>
         <li><a href="login.html" class="login">Login</a></li>
+        <li><a href="" onclick="logout()" id="signout">Sign Out</a></li>
         
 
       </ul>
