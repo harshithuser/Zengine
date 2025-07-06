@@ -15,7 +15,8 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    body,
+    html {
       height: 100%;
       overflow-x: hidden;
     }
@@ -44,8 +45,13 @@
     }
 
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     /* === Animated Background === */
@@ -59,9 +65,17 @@
     }
 
     @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     nav {
@@ -230,6 +244,71 @@
     .sub-menu-link:hover span {
       transform: translateX(5px);
     }
+
+    .contents{
+       display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .container {
+      padding: 30px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 370px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      border: 3px solid white;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      margin-left: 40px;
+      margin-top: 40px;
+      box-shadow: 0 4px 10px aqua;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px aqua;
+    }
+
+    .box img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .box hr {
+      width: 100%;
+    }
+
+    .box h3 {
+      font-size: 30px;
+      font-weight: 1500;
+      color: aqua;
+    }
+
+    .box p {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .box img,
+    h3,
+    hr,
+    p {
+      margin-top: 10px;
+    }
   </style>
 </head>
 
@@ -247,6 +326,8 @@
         <li><a href="#">Features</a></li>
         <li><a href="#">About</a></li>
         <li><a href="login.html" class="login">Login</a></li>
+        
+
       </ul>
       <img src="images/user.png" class="user-pic" id="user-pic" onclick="toggleMenu()">
       <div class="sub-menu-wrap" id="subMenu">
@@ -274,6 +355,65 @@
         </div>
       </div>
     </nav>
+
+    <div class="contents">
+      
+      
+     
+      
+      
+      <div class="container">
+        <a class="box" href="https://zengames.netlify.app/">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-So1_gFGtnb-n2_2LYtOXUzFVMT3A2G3tyA&usqp=CAU">
+          <h3>Zengames</h3>
+          <hr>
+          <p>Play a Variety of Games <br> from here!!</p>
+        </a>
+
+        <a class="box" href="https://zengine.netlify.app/">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfGYu5TnGi36ysXLeqrk_aHLAUkGvqet-j-GHJkSsyn12zctXhtKx1QReg79R-TaPcW2TgnnAfh1AP4pGzEgps1cYmknLYNuth5aiN3FDQEvxNRPw02-PcUp__WUmlHJHJc7P81IYxUuE7LTTVoUkhcmmGsETXpGJf4kNoNhlFub__1hpuZrkS1JnSPdo/s1200/1000038702.jpg">
+          <h3>Zengine</h3>
+          <hr>
+          <p>Search faster and smarter with <br> advanced tools!</p>
+        </a>
+
+        <a class="box" href="https://zenginefootballstats.netlify.app/">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaSdqRRxuWWyxcN_cCUYQrKaKQOBkXd2AaHYuu_bUkxycLeMnIatpo2XkiDjkfiBFlMh-_f291Y1FScYbTaq6_wXf0QsnZkV06cFk-952-jd6ovHEJYnFnYeA5pKJxFKlFJXFC0DpqqYwC8ydf1bLVnapIvVf7anVaCcQbujT3JU6nV18xAko-o7r7DZs/s1080/1000038698.jpg">
+          <h3>Zengine Football Stats</h3>
+          <hr>
+          <p>Provides you football stats <br> from around the world!!!</p>
+        </a>
+
+        <a class="box" href="https://zenbot.netlify.app/">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgELpJWH-DVqF1mvJyuZQLIyYbGvJTTHm_c4cWew4iHkv_SaesVBFV0r8GClEhpnFRfH5W6qVHuiowd4x_iwPLIMO9zS23vMF1cfKQXMucW6IDjoXS_L4GOTC7Fcyr0uOIecKwUKJQ5f7olVtVMUv6_gNzZNHTr65d1yrYGFMC_VojIqxXGQsw0tIonqAU/s980/1000038691.jpg">
+          <h3>Zenbot</h3>
+          <hr>
+          <p>A very responsive and efficient <br> chat bot to chat!! </p>
+        </a>
+
+        <a class="box" href="https://zentools.netlify.app/">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhn41HcExUolTAa2Eu-_PwqKO6q7vUhRb1GieRbzCxld9RdGFOxy1Dzr2pJ-0V2ZFBV_LX9YAVM4ZM3WgH_E-epAot8fWZSyIXBOOoTAWlJ15nOAV8m8cw6TP-G9ewGBcQ1O2NROEWKYCN-sjHSCMAQZO-07t1UGXGrT-FSxskrmOziV-_PY6WAf-IYm-s/s1024/1000038703.png">
+          <h3>Zentools</h3>
+          <hr>
+          <p>Access variety of tools <br> from here!!!</p>
+        </a>
+
+        <a class="box" href="https://zenjustforfun.netlify.app/">
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZKE6TBPE8spKONg7maobTGmeKAlKeNwnvN-XcP-uWZOXLIdpVjQHes2UBNhu7BsLm4OeC8_bomhxN0HCd_-ilO13v_g2aTTvr2tnjXtVyHD-MXtzel_mjm8DK4niPIsvUfFj1vO3GjUDaUCbJvprw_hZQH-inlWwSdwGPAchQSOQh3B1xScyIv4UuC18/s740/1000038704.jpg">
+          <h3>Zen Just For Fun</h3>
+          <hr>
+          <p>Unique Fun Websites <br> for Users Like You !!</p>
+        </a>
+
+
+      </div>
+    </div>
   </div>
 
   <script type="module" src="main.js"></script>
